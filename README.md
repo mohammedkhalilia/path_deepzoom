@@ -13,7 +13,7 @@ Test using Swagger
 ----------------------
 Go to: http://digitalslidearchive.emory.edu/swagger
 
-In the explore box type: http://digitalslidearchive.emory.edu:8003/v1/docs
+In the explore box type: http://digitalslidearchive.emory.edu/dzi/docs
 
 Public Access
 ----------------------
