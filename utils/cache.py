@@ -23,6 +23,7 @@ class SlideCache(object):
 
         osr = OpenSlide(path)
         slide = DeepZoomGenerator(osr, **self.dz_opts)
+
         try:
             mpp_x = osr.properties[openslide.PROPERTY_NAME_MPP_X]
             mpp_y = osr.properties[openslide.PROPERTY_NAME_MPP_Y]
