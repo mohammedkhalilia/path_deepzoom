@@ -30,8 +30,8 @@ There are two endpoints only
 `/{PATH}/{level}/{x}/{y}` Return an RGB Image for a tile
 
 Examples:
-If the path is `ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi`
+If the path is `SLIDES/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi`
 
-http://digitalslidearchive.emory.edu/dzi/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi
+http://digitalslidearchive.emory.edu/dzi/SLIDES/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi
 
-http://digitalslidearchive.emory.edu/dzi/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi/10/0/0
+http://digitalslidearchive.emory.edu/dzi/SLIDES/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi/10/0/0

@@ -41,12 +41,17 @@ class Tile(Resource):
             type: integer
         responses:
           200:
-            description: Returns the slide information
+            description: Returns the tile
           404:
-          	description: Invalid slide Id or slide not found
+          	description: Invalid path or openslide error
 		"""
 
-		path = os.path.join(self.config["slides_dir"], path)
+		path = "/" + path
+
+		if not os.path.exists(path):
+			resp = {"status": 404, "message": "Path not found: " + path}
+			return Response(dumps(resp), status=404, mimetype='application/json')
+
 		slide = get_slide(path)
 		
 		try:

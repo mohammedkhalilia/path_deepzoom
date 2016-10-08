@@ -12,7 +12,6 @@ def get_app_configurations():
 	and use default settings to fill in missing settings
 	"""
 	defaults = {
-			'slides_dir': '/SLIDES',
 			'tile_size': 256,
 			'overlap': 1,
 			'limit_bounds': 0,
