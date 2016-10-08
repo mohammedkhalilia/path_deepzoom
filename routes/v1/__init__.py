@@ -39,11 +39,10 @@ def spec():
 # Attach all endpoints to the v1 API
 api.add_resource(
 		DeepZoom,
-		"/deepzoom/<path:path>", 
-		endpoint="deepzoom", 
+		"/<path:path>", 
 		resource_class_kwargs=params)
 
 api.add_resource(
 		Tile,
-		"/tile/<path:path>/<int:level>/<int:x>/<int:y>", 
+		"/<path:path>/<int:level>/<int:x>/<int:y>", 
 		resource_class_kwargs=params)

@@ -5,9 +5,9 @@
 source /home/dgutman/osdTester/bin/activate
 export PYTHONPATH=/home/dgutman/osdTester:$PYTHONPATH
 
-exec gunicorn -b 0.0.0.0:5081 \
+exec gunicorn -b 0.0.0.0:8003 \
 	--workers=16 \
 	--log-level debug \
-	--name dsa_dev \
-	--chdir /home/mkhali8/dev/dsa_dev/api wsgi
+	--name path_dzi \
+	--chdir /home/mkhali8/dev/path_deepzoom wsgi
 
