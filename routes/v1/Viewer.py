@@ -1,6 +1,7 @@
 from flask import make_response, render_template
 from flask_restful import Resource
 from openslide import OpenSlide
+from bson.json_util import dumps
 import os
 
 class Viewer(Resource):
@@ -8,13 +9,26 @@ class Viewer(Resource):
 		pass
 
 	def get(self, path):
-		"""Get path
-		Fetch a static HTML/JS/CSS files
-		Args:
-			path: path to static ID
-		Returns:
-			static file
 		"""
+        Get deep zoom image
+        ---
+        tags:
+          - View
+        parameters:
+          - in: path
+            name: path
+            description: Example SLIDES/ADRC/DG_ADRC_Slides/ADRC59-164/aBeta/ADRC59-164_1A_AB.ndpi
+            type: string
+        responses:
+          200:
+            description: Renders OpenSeadraon viewer
+          404:
+          	description: Invalid path or openslide error
+        """
+
+		if not os.path.exists("/" + path):
+			resp = {"status": 404, "message": "Path not found: /" + path}
+			return Response(dumps(resp), status=404, mimetype='application/json')
 
 		osr = OpenSlide("/" + path)
 		

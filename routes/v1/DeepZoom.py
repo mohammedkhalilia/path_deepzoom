@@ -29,7 +29,7 @@ class DeepZoom(Resource):
         parameters:
           - in: path
             name: path
-            description: Example ADRC/DG_ADRC_Slides/ADRC59-164/aBeta/ADRC59-164_1A_AB.ndpi
+            description: Example SLIDES/ADRC/DG_ADRC_Slides/ADRC59-164/aBeta/ADRC59-164_1A_AB.ndpi
             type: string
         responses:
           200:
