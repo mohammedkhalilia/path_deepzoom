@@ -4,6 +4,7 @@ from flask_restful.utils import cors
 from flask import Blueprint, current_app, jsonify
 from DeepZoom import DeepZoom
 from Tile import Tile
+from Viewer import Viewer
 from utils.config import get_app_configurations
 
 # Get app configurations
@@ -46,3 +47,7 @@ api.add_resource(
 		Tile,
 		"/<path:path>/<int:level>/<int:x>/<int:y>", 
 		resource_class_kwargs=params)
+
+api.add_resource(
+        Viewer,
+        "/view/<path:path>")

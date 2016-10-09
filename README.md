@@ -23,11 +23,13 @@ http://digitalslidearchive.emory.edu/dzi instead of using port 8003
 
 Endopints
 ----------------------
-There are two endpoints only
+There are three endpoints only
 
 `/{PATH}` Return a string containing the XML metadata for the Deep Zoom file
 
 `/{PATH}/{level}/{x}/{y}` Return an RGB Image for a tile
+
+`/view/{PATH}` Renders OpenSeadragon for demo the tile server
 
 Examples:
 If the path is `SLIDES/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi`
@@ -35,3 +37,5 @@ If the path is `SLIDES/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10
 http://digitalslidearchive.emory.edu/dzi/SLIDES/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi
 
 http://digitalslidearchive.emory.edu/dzi/SLIDES/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi/10/0/0
+
+http://digitalslidearchive.emory.edu/dzi/view/SLIDES/ADRC/DG_ADRC_Slides/ADRC36-04/pTDP/ADRC36-04_F_pTDP-1to10K.ndpi

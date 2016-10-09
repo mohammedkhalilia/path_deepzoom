@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset = UTF-8">
+    <title>Digital Slide Archive Deep Zoom Veiwer</title>
+    <script type="text/javascript" src="http://digitalslidearchive.emory.edu/bower_components/openseadragon/built-openseadragon/openseadragon/openseadragon.min.js"></script>
+    <style>
+        html, body{
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="image_viewer" style="width:100%; height:100%"></div>
+</body>
+</html>
+
+<script>   
+    var slide = {{ data|tojson }};
+    console.log(slide);
+
+    var tileSource = {
+        width: slide.width,
+        height: slide.height,
+        tileWidth: slide.tileWidth,
+        tileHeight: slide.tileHeight,
+        getTileUrl: function(level, x, y){
+            return "http://digitalslidearchive.emory.edu/dzi/"+ slide.filename + "/" + level + "/" + x + "/" + y;
+        }
+    };
+
+    console.log(tileSource);
+
+    var viewer = OpenSeadragon({
+        id: 'image_viewer',
+        prefixUrl: "http://digitalslidearchive.emory.edu/bower_components/openseadragon/built-openseadragon/openseadragon/images/",
+        navigatorPosition: "BOTTOM_RIGHT",
+        showNavigator: true
+    });
+
+    viewer.open(tileSource);
+    </script>
