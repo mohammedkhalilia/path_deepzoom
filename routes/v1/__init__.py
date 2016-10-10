@@ -33,8 +33,8 @@ def after_request(response):
 def spec():
     swag = swagger(current_app)
     swag['info']['version'] = "1.0"
-    swag['info']['title'] = "Digital Slide Archive Deep Zoom API"
-    swag['info']['base_path'] = "http://digitalslidearchive.emory.edu:8003"
+    swag['info']['title'] = "Path Deep Zoom API"
+    swag['info']['base_path'] = "http://digitalslidearchive.emory.edu/dzi/"
     return jsonify(swag)
 
 # Attach all endpoints to the v1 API

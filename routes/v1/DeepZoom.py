@@ -22,7 +22,7 @@ class DeepZoom(Resource):
 	@cache.cached()	
 	def get(self, path):
 		"""
-        Get deep zoom image
+        Get XML metadata fo the deep zoom image
         ---
         tags:
           - Deep Zoom
@@ -31,12 +31,14 @@ class DeepZoom(Resource):
             name: path
             description: Example SLIDES/ADRC/DG_ADRC_Slides/ADRC59-164/aBeta/ADRC59-164_1A_AB.ndpi
             type: string
+            required: true
+            default: "" 
         responses:
           200:
             description: XML metadata for the Deep Zoom file
           404:
           	description: Invalid path or openslide error
-        """
+		"""
 
 		path = "/" + path
 

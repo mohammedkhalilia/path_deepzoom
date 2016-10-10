@@ -27,18 +27,26 @@ class Tile(Resource):
             name: path
             description: Example SLIDES/ADRC/DG_ADRC_Slides/ADRC59-164/aBeta/ADRC59-164_1A_AB.ndpi
             type: string
+            required: true
+            default: ""
           - in: path
             name: level
             description: The zoom level
             type: integer
+            required: true
+            default: ""
           - in: path
             name: x
             description: The column
             type: integer
+            required: true
+            default: ""
           - in: path
             name: y
             description: The row
             type: integer
+            required: true
+            default: ""
         responses:
           200:
             description: Returns the tile

@@ -1,4 +1,4 @@
-from flask import make_response, render_template
+from flask import Response, make_response, render_template
 from flask_restful import Resource
 from openslide import OpenSlide
 from bson.json_util import dumps
@@ -19,6 +19,8 @@ class Viewer(Resource):
             name: path
             description: Example SLIDES/ADRC/DG_ADRC_Slides/ADRC59-164/aBeta/ADRC59-164_1A_AB.ndpi
             type: string
+            required: true
+            default: ""
         responses:
           200:
             description: Renders OpenSeadraon viewer
