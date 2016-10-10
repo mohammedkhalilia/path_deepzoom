@@ -40,7 +40,7 @@ class Viewer(Resource):
 			"height": osr.dimensions[1],
 			"tileWidth": 256,
 			"tileHeight": 256,
-			"levels": 10
+			"levels": osr.level_count
 		}
 
 		headers = {'Content-Type': 'text/html'}
